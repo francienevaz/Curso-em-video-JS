@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our cultures</title>
+    <style>
+
+       body {
+            
+            font-family: 'Courier New';
+            font-size: 20px;
+            color: rgb(8, 0, 4);
+            text-align: center;
+            background: linear-gradient(pink,salmon,darkSalmon);
+            padding: 100px;
+            height: 800px;
+            width: 1000px;
+            border-radius: 20px;
+
+            }
+        p#one {
+            font-family: 'Franklin Gothic Medium';
+            color: rgb(216, 20, 20);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1> Welcome! </h1>
+    <p id="one"> Here, we goint to talk about some cultures in the world, let's go!</p>
+    <p id="two">There's uncontable types of cultures in our earth. Our planet has a variety species and races.</p>
+    <h2>We want to know about you. Tell me, where are you from?</h2>
+    <input type="text" name="Country" id="Country">
+    <input type="button" value="Confirm" onclick="calcule()" >
+    <div id="res">
+
+    </div>
+    <script>
+        function calcule () {
+            var Country = window.document.getElementById("Country")
+            var res = window.document.getElementById("res")
+            var pais = (Country.value)
+            var p = "Brasil"
+            if (pais != p) {
+               res.innerHTML = `<p> <strong>You are Outlander ${nome}!</strong> </p>`
+            } else {
+               res.innerHTML = `<p> <strong> You are Brazilian ${nome}!</strong> </p>`
+            }
+        }
+
+        
+       
+       /* var dia = "Good Morning!"
+        var noite = "Good Afternoon!"
+        if (dia < 12) {
+            console.log('dia')
+} else {
+    console.log('noite')
+} */
+        var nome = window.prompt(`I'd like to know more about you! What's your name?`)
+        window.alert(`Nice to meet you ${nome}!`) 
+
+    </script>
+    
+</body>
+</html>

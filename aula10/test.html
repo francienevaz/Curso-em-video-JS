@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS - DOM</title>
+    <style>
+        div#cor {
+            font-family: cursive;
+            color: black;
+        }
+        body {
+
+            background: linear-gradient(rgb(223, 138, 138),deeppink, darkred);
+            padding: 100px;
+            height: 800px;
+            width: 1000px;
+            border-radius: 20px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="cor">
+    <h1> Exercícios</h1>
+    <p> Aqui vamos usar o JS para criar uma página dinânimica, onde haja uma alteração no plano <br>
+    de fundo de cor diferente de acordo com a hora. Ou seja, se for dia a cor de fundo será de uma cor <br>
+    se for tarde ou noite, a cor mudará.</p>
+    
+    <h3> Vamos começar! </h3>
+
+    </div>
+
+    <script>
+        var now = new Date ()
+        var our = now.getHours ()
+        var change = window.document.querySelector('div#cor')
+        
+            if (our < 12) {
+                change.style.background= "aqua"
+            } else {
+                if (our < 18)
+                change.style.background= "lightsalmon"
+            }
+        
+    </script>
+</body>
+</html>
